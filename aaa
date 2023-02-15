@@ -1,0 +1,932 @@
+--- Estimation_pour_Blancs = 7 	 Estimation_pour_Noirs = 7 ---
+--- coup N° 0 ---
+tcfnrfct
+pppppppp
+        
+        
+        
+        
+PPPPPPPP
+TCFNRFCT
+
+--- coup N° 1 ---
+tcfnrfct
+pppppppp
+        
+        
+        
+  C     
+PPPPPPPP
+T FNRFCT
+
+--- coup N° 2 ---
+tcfnrfct
+ ppppppp
+p       
+        
+        
+  C     
+PPPPPPPP
+T FNRFCT
+
+--- coup N° 3 ---
+tcfnrfct
+ ppppppp
+p       
+        
+        
+  C     
+PPPPPPPP
+ TFNRFCT
+
+--- coup N° 4 ---
+tcfnrfct
+ ppppppp
+        
+p       
+        
+  C     
+PPPPPPPP
+ TFNRFCT
+
+--- coup N° 5 ---
+tcfnrfct
+ ppppppp
+        
+p       
+ P      
+  C     
+P PPPPPP
+ TFNRFCT
+
+--- coup N° 6 ---
+tcfnrfct
+ ppppppp
+        
+        
+ p      
+  C     
+P PPPPPP
+ TFNRFCT
+
+--- coup N° 7 ---
+tcfnrfct
+ ppppppp
+        
+        
+ p      
+  C     
+PTPPPPPP
+  FNRFCT
+
+--- coup N° 8 ---
+tcfnrfct
+ ppppppp
+        
+        
+        
+  p     
+PTPPPPPP
+  FNRFCT
+
+--- coup N° 9 ---
+tcfnrfct
+ ppppppp
+        
+        
+        
+  p    C
+PTPPPPPP
+  FNRF T
+
+--- coup N° 10 ---
+tcfnrfct
+ ppppppp
+        
+        
+        
+       C
+PpPPPPPP
+  FNRF T
+
+--- coup N° 11 ---
+tcfnrfct
+ ppppppp
+        
+        
+        
+    P  C
+PpPP PPP
+  FNRF T
+
+--- coup N° 12 ---
+tcfnrfct
+ ppppppp
+        
+        
+        
+    P  C
+P PP PPP
+ nFNRF T
+
+--- coup N° 13 ---
+tcfnrfct
+ ppppppp
+        
+        
+        
+    P  C
+PFPP PPP
+ n NRF T
+
+--- coup N° 14 ---
+tcfnrfct
+ ppppppp
+        
+        
+        
+    P  C
+PFPP PPP
+   nRF T
+
+--- coup N° 15 ---
+tcfnrfct
+ ppppppp
+        
+        
+        
+    P  C
+PFPP PPP
+   R F T
+
+--- coup N° 16 ---
+tcfnrfct
+  pppppp
+ p      
+        
+        
+    P  C
+PFPP PPP
+   R F T
+
+--- coup N° 17 ---
+tcfnrfct
+  pppppp
+Fp      
+        
+        
+    P  C
+PFPP PPP
+   R   T
+
+--- coup N° 18 ---
+tcfnrfct
+  pppppp
+F       
+ p      
+        
+    P  C
+PFPP PPP
+   R   T
+
+--- coup N° 19 ---
+tcfnrfct
+ Fpppppp
+        
+ p      
+        
+    P  C
+PFPP PPP
+   R   T
+
+--- coup N° 20 ---
+ cfnrfct
+tFpppppp
+        
+ p      
+        
+    P  C
+PFPP PPP
+   R   T
+
+--- coup N° 21 ---
+ cfnrfct
+tFpppppp
+        
+ p      
+   F    
+    P  C
+P PP PPP
+   R   T
+
+--- coup N° 22 ---
+ c nrfct
+tfpppppp
+        
+ p      
+   F    
+    P  C
+P PP PPP
+   R   T
+
+--- coup N° 23 ---
+ c nrfct
+tfpppppp
+        
+ p      
+   F    
+    P  C
+P PPRPPP
+       T
+
+--- coup N° 24 ---
+tc nrfct
+ fpppppp
+        
+ p      
+   F    
+    P  C
+P PPRPPP
+       T
+
+--- coup N° 25 ---
+tc nrfct
+ fpppppp
+        
+ p      
+   F    
+    P  C
+P PPRPPP
+ T      
+
+--- coup N° 26 ---
+ c nrfct
+ fpppppp
+        
+tp      
+   F    
+    P  C
+P PPRPPP
+ T      
+
+--- coup N° 27 ---
+ c nrfct
+ fpppppp
+        
+tp      
+        
+  F P  C
+P PPRPPP
+ T      
+
+--- coup N° 28 ---
+ c nrfct
+tfpppppp
+        
+ p      
+        
+  F P  C
+P PPRPPP
+ T      
+
+--- coup N° 29 ---
+ c nrfct
+tfpppppp
+        
+ p      
+   F    
+    P  C
+P PPRPPP
+ T      
+
+--- coup N° 30 ---
+ c nrfct
+ fpppppp
+        
+ p      
+t  F    
+    P  C
+P PPRPPP
+ T      
+
+--- coup N° 31 ---
+ c nrfct
+ fpppppp
+        
+ p      
+t  F    
+    P  C
+PTPPRPPP
+        
+
+--- coup N° 32 ---
+ c nrfct
+ fpppppp
+        
+        
+tp F    
+    P  C
+PTPPRPPP
+        
+
+--- coup N° 33 ---
+ c nrfct
+ fpppppp
+        
+        
+tp F    
+P   P  C
+ TPPRPPP
+        
+
+--- coup N° 34 ---
+ c nrfct
+  pppppp
+f       
+        
+tp F    
+P   P  C
+ TPPRPPP
+        
+
+--- coup N° 35 ---
+ c nrfct
+  pppppp
+f       
+        
+tp F    
+P   P  C
+ TPP PPP
+    R   
+
+--- coup N° 36 ---
+ c nrfct
+  pppppp
+f       
+t       
+ p F    
+P   P  C
+ TPP PPP
+    R   
+
+--- coup N° 37 ---
+ c nrfct
+  pppppp
+fF      
+t       
+ p      
+P   P  C
+ TPP PPP
+    R   
+
+--- coup N° 38 ---
+ c nrfct
+  pppppp
+fF      
+   t    
+ p      
+P   P  C
+ TPP PPP
+    R   
+
+--- coup N° 39 ---
+ c nrfct
+  pppppp
+fF      
+   t    
+ p  P   
+P      C
+ TPP PPP
+    R   
+
+--- coup N° 40 ---
+ c nrfct
+  pppppp
+fF      
+    t   
+ p  P   
+P      C
+ TPP PPP
+    R   
+
+--- coup N° 41 ---
+ c nrfct
+  pppppp
+f       
+    t   
+ p FP   
+P      C
+ TPP PPP
+    R   
+
+--- coup N° 42 ---
+ c nrfct
+  pppppp
+f       
+        
+ p Ft   
+P      C
+ TPP PPP
+    R   
+
+--- coup N° 43 ---
+ c nrfct
+  pppppp
+f       
+        
+ p Ft   
+P      C
+ TPP PPP
+   R    
+
+--- coup N° 44 ---
+ c nrfct
+  pp ppp
+f   p   
+        
+ p Ft   
+P      C
+ TPP PPP
+   R    
+
+--- coup N° 45 ---
+ c nrfct
+  pp ppp
+f   pF  
+        
+ p  t   
+P      C
+ TPP PPP
+   R    
+
+--- coup N° 46 ---
+ cn rfct
+  pp ppp
+f   pF  
+        
+ p  t   
+P      C
+ TPP PPP
+   R    
+
+--- coup N° 47 ---
+ cn rfct
+  pp ppp
+f   pF  
+        
+ p  t   
+P  P   C
+ TP  PPP
+   R    
+
+--- coup N° 48 ---
+ cn rfct
+  pp ppp
+f   pF  
+        
+ p    t 
+P  P   C
+ TP  PPP
+   R    
+
+--- coup N° 49 ---
+ cn rfct
+  pp ppp
+f   pF  
+        
+ p    t 
+P  P P C
+ TP   PP
+   R    
+
+--- coup N° 50 ---
+ cn rfct
+  pp ppp
+f   pFt 
+        
+ p      
+P  P P C
+ TP   PP
+   R    
+
+--- coup N° 51 ---
+ cn rfct
+  pp ppp
+f   pFt 
+        
+ p   C  
+P  P P  
+ TP   PP
+   R    
+
+--- coup N° 52 ---
+ cn rfct
+  pp ppp
+f   pF t
+        
+ p   C  
+P  P P  
+ TP   PP
+   R    
+
+--- coup N° 53 ---
+ cn rfct
+  pp ppp
+f   pF t
+        
+ p   C P
+P  P P  
+ TP   P 
+   R    
+
+--- coup N° 54 ---
+  n rfct
+  pp ppp
+f c pF t
+        
+ p   C P
+P  P P  
+ TP   P 
+   R    
+
+--- coup N° 55 ---
+  n rfct
+  pp ppp
+f c pF t
+        
+Pp   C P
+   P P  
+ TP   P 
+   R    
+
+--- coup N° 56 ---
+  n rfct
+  pp ppp
+f c  F t
+    p   
+Pp   C P
+   P P  
+ TP   P 
+   R    
+
+--- coup N° 57 ---
+  n rfct
+  pp ppp
+f c  FCt
+    p   
+Pp     P
+   P P  
+ TP   P 
+   R    
+
+--- coup N° 58 ---
+  n rfct
+  pp pp 
+f c  Fpt
+    p   
+Pp     P
+   P P  
+ TP   P 
+   R    
+
+--- coup N° 59 ---
+  n rfct
+  pp pp 
+f c   pt
+    p F 
+Pp     P
+   P P  
+ TP   P 
+   R    
+
+--- coup N° 60 ---
+  n rfct
+  pp pp 
+f c   p 
+    p Ft
+Pp     P
+   P P  
+ TP   P 
+   R    
+
+--- coup N° 61 ---
+  n rfct
+  pp pp 
+f c   p 
+    p Ft
+Pp    PP
+   P P  
+ TP     
+   R    
+
+--- coup N° 62 ---
+  n rfct
+  pp ppt
+f c   p 
+    p F 
+Pp    PP
+   P P  
+ TP     
+   R    
+
+--- coup N° 63 ---
+  n rfct
+  pp ppt
+f c   p 
+    p F 
+Pp   PPP
+   P    
+ TP     
+   R    
+
+--- coup N° 64 ---
+  n rfct
+  pp  pt
+f c  pp 
+    p F 
+Pp   PPP
+   P    
+ TP     
+   R    
+
+--- coup N° 65 ---
+  n rfct
+  pp  pt
+f c  pp 
+    pPF 
+Pp    PP
+   P    
+ TP     
+   R    
+
+--- coup N° 66 ---
+  n rfct
+  pp  pt
+f c  p  
+    ppF 
+Pp    PP
+   P    
+ TP     
+   R    
+
+--- coup N° 67 ---
+  n rfct
+  pp  pt
+f c  p  
+    pp  
+Pp    PP
+   PF   
+ TP     
+   R    
+
+--- coup N° 68 ---
+  n rfct
+  pp  pt
+f c  p  
+    p   
+Pp   pPP
+   PF   
+ TP     
+   R    
+
+--- coup N° 69 ---
+  n rfct
+  pp  pt
+f c  p  
+  F p   
+Pp   pPP
+   P    
+ TP     
+   R    
+
+--- coup N° 70 ---
+  n r ct
+  pp  pt
+f c  p  
+  f p   
+Pp   pPP
+   P    
+ TP     
+   R    
+
+--- coup N° 71 ---
+  n r ct
+  pp  pt
+f c  p  
+  f p   
+Pp P pPP
+        
+ TP     
+   R    
+
+--- coup N° 72 ---
+  n r ct
+  pp  pt
+f c  p  
+  f     
+Pp p pPP
+        
+ TP     
+   R    
+
+--- coup N° 73 ---
+  n r ct
+  pp  pt
+f c  p  
+  f   P 
+Pp p p P
+        
+ TP     
+   R    
+
+--- coup N° 74 ---
+  n r ct
+  pp  pt
+f c     
+  f   p 
+Pp p p P
+        
+ TP     
+   R    
+
+--- coup N° 75 ---
+  n r ct
+  pp  pt
+f c     
+  f   p 
+Pp p p P
+        
+ TPR    
+        
+
+--- coup N° 76 ---
+  n r ct
+  pp  p 
+f c     
+  f   p 
+Pp p p t
+        
+ TPR    
+        
+
+--- coup N° 77 ---
+  n r ct
+  pp  p 
+f c     
+  f   p 
+Pp p p t
+  P     
+ T R    
+        
+
+--- coup N° 78 ---
+  n r ct
+  pp  p 
+f c     
+  f   p 
+P  p p t
+  p     
+ T R    
+        
+
+--- coup N° 79 ---
+  n r ct
+  pp  p 
+f c     
+  f   p 
+P  p p t
+  p     
+ T      
+  R     
+
+--- coup N° 80 ---
+  n r ct
+  pp  p 
+f c     
+  f   p 
+P  p p t
+        
+ p      
+  R     
+
+--- coup N° 81 ---
+  n r ct
+  pp  p 
+f c     
+  f   p 
+P  p p t
+        
+ R      
+        
+
+--- coup N° 82 ---
+  n r ct
+  pp  p 
+f c     
+  f   p 
+P    p t
+   p    
+ R      
+        
+
+--- coup N° 83 ---
+  n r ct
+  pp  p 
+f c     
+  f   p 
+P    p t
+  Rp    
+        
+        
+
+--- coup N° 84 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p t
+  Rp    
+        
+        
+
+--- coup N° 85 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p t
+   p    
+ R      
+        
+
+--- coup N° 86 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p t
+        
+ R p    
+        
+
+--- coup N° 87 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p t
+  R     
+   p    
+        
+
+--- coup N° 88 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p t
+  R     
+        
+   n    
+
+--- coup N° 89 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p t
+        
+ R      
+   n    
+
+--- coup N° 90 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p t
+        
+ R n    
+        
+
+--- coup N° 91 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p t
+        
+   n    
+ R      
+
+--- coup N° 92 ---
+  n r ct
+  pp  p 
+f       
+  f   p 
+P  c p  
+        
+   n    
+ R     t
+
+Victoire de 'N'

@@ -65,7 +65,7 @@ int nbBeta = 0;
 
 int main( int argc, char *argv[] )
 {
-
+   ANN = fann_create_from_file("dataset/data.net");
    int n, i, j, score, stop, cout, hauteur, largeur, tour, estMin, estMax, nbp;
 
    int sx, dx, cout2, legal;
@@ -87,8 +87,9 @@ int main( int argc, char *argv[] )
    Est[4] = estim5;
    Est[5] = estim6;
    Est[6] = estim7;
+   Est[7] = estim8;
    // Nombre de fonctions d'estimation disponibles
-   nbEst = 7;        
+   nbEst = 8;        
 
    // Choix du type d'exécution (pc-contre-pc ou user-contre-pc) ...
    printf("Type de parties (B:Blancs  N:Noirs) :\n");
@@ -108,19 +109,20 @@ int main( int argc, char *argv[] )
       printf("4- basée sur le nb de pieces et les menaces\n");
       printf("5- basée sur le nb de pieces et l'occupation\n");
       printf("6- basée sur une combinaisant de 3 estimations: (2 -> 5 -> 4)\n");
-      printf("7- une fonction d'estimation aléatoire (ou à définir) \n\n");
+      printf("7- une fonction d'estimation par regression) \n");
+      printf("8- une fonction d'estimation par piece-square tables \n\n");
       if (typeExec != 3) {
          printf("Donnez la fonction d'estimation utilisée par le PC pour le joueur B : ");
          scanf(" %d", &estMax);
       }
       else
-         estMax = 7;
+         estMax = 8;
       if (typeExec != 2) {
          printf("Donnez la fonction d'estimation utilisée par le PC pour le joueur N : ");
          scanf(" %d", &estMin);
       }
       else
-         estMin = 7;
+         estMin = 8;
    }
    while ( estMax < 1 || estMax > nbEst || estMin < 1 || estMin > nbEst );
 
@@ -289,7 +291,7 @@ int main( int argc, char *argv[] )
             j = -1;
 
             for (i=0; i<n; i++) {
-                 cout=iterative_deepening(&T[i],10,largeur);
+                cout=iterative_deepening(&T[i],largeur,MIN,estMax);
                 //cout = minmax_ab( &T[i], MIN, hauteur, score, +INFINI, largeur, estMax, nbp );
                 printf("."); fflush(stdout);
                 
@@ -427,7 +429,7 @@ int main( int argc, char *argv[] )
             score = +INFINI;
             j = -1;                
             for (i=0; i<n; i++) {
-                cout=iterative_deepening(&T[i],10,largeur);
+                cout=iterative_deepening(&T[i],largeur,MAX,estMin);
                // cout = minmax_ab( , MAX, hauteur, -INFINI, score, largeur, estMin, nbp );
                 //cout = minmax_ab( &T[i], MAX, hauteur, -INFINI, +INFINI, largeur, estMin );
                 printf("."); fflush(stdout);

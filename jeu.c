@@ -497,14 +497,226 @@ int estim6(struct config* conf)
 
 
 /* Une fonction d'estimation vide */
-int estim7(struct config* conf)
+int estim7( struct config *conf )
 {
 
- 
-    
-     return (rand() % 200) - 100;
+	int i, j, score;
+	fann_type input[64];
+	fann_type *output;
+	for (i=0; i<8; i++)
+	for (j=0; j<8; j++) {
+		switch (conf->mat[i][j]) {
+		case 'p' :	
+			input[i*8+j] = 1;
+			break;
+		case 'c' : 
+			input[i*8+j] = 3;
+			break;
+		case 'f' : 
+			input[i*8+j] = 3;
+			break;
+		case 't' : 
+			input[i*8+j] = 5;
+			break;
+		case 'n' :  
+			input[i*8+j] = 9;
+			break;
+		case 'r' :
+			input[i*8+j] = 10;
+			break;
+		case -'p' : 
+			input[i*8+j] = -1;
+			break;
+		case -'c' :
+			input[i*8+j] = -3;
+			break;
+		case -'f' : 
+			input[i*8+j] = -3;
+			break;
+		case -'t' : 
+			input[i*8+j] = -5;
+			break;
+		case -'n' : 
+			input[i*8+j] = -9;
+			break;
+		case -'r':
+			input[i*8+j] = -10;
+			break;
+		default:
+			input[i*8+j] = 0;
+			break;
+		}
+	}
+	output = fann_run(ANN, input);
+
+	score = floor(output[0]);
+
+	if (score > 98 ) score = 98;
+    if (score < -98 ) score = -98;
+	
+	return score;
 
 } // fin de estim7
+
+int estim8( struct config *conf )
+{
+	const int PawnTable[64] = {
+	0,  0,  0,  0,  0,  0,  0,  0,
+	50, 50, 50, 50, 50, 50, 50, 50,
+	10, 10, 20, 30, 30, 20, 10, 10,
+	5,  5, 10, 25, 25, 10,  5,  5,
+	0,  0,  0, 20, 20,  0,  0,  0,
+	5, -5,-10,  0,  0,-10, -5,  5,
+	5, 10, 10,-20,-20, 10, 10,  5,
+	0,  0,  0,  0,  0,  0,  0,  0
+	};
+
+	const int KnightTable[64] = {
+	-50,-40,-30,-30,-30,-30,-40,-50,
+	-40,-20,  0,  0,  0,  0,-20,-40,
+	-30,  0, 10, 15, 15, 10,  0,-30,
+	-30,  5, 15, 20, 20, 15,  5,-30,
+	-30,  0, 15, 20, 20, 15,  0,-30,
+	-30,  5, 10, 15, 15, 10,  5,-30,
+	-40,-20,  0,  5,  5,  0,-20,-40,
+	-50,-40,-30,-30,-30,-30,-40,-50		
+	};
+
+	const int BishopTable[64] = {
+	-20,-10,-10,-10,-10,-10,-10,-20,
+	-10,  0,  0,  0,  0,  0,  0,-10,
+	-10,  0,  5, 10, 10,  5,  0,-10,
+	-10,  5,  5, 10, 10,  5,  5,-10,
+	-10,  0, 10, 10, 10, 10,  0,-10,
+	-10, 10, 10, 10, 10, 10, 10,-10,
+	-10,  5,  0,  0,  0,  0,  5,-10,
+	-20,-10,-10,-10,-10,-10,-10,-20
+	};
+
+	const int RookTable[64] = {
+	0,  0,  0,  0,  0,  0,  0,  0,
+	5, 10, 10, 10, 10, 10, 10,  5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	0,  0,  0,  5,  5,  0,  0,  0	
+	};
+
+	const int QueenTable[64] = {
+	-20,-10,-10, -5, -5,-10,-10,-20,
+	-10,  0,  0,  0,  0,  0,  0,-10,
+	-10,  0,  5,  5,  5,  5,  0,-10,
+	-5,  0,  5,  5,  5,  5,  0, -5,
+	0,  0,  5,  5,  5,  5,  0, -5,
+	-10,  5,  5,  5,  5,  5,  0,-10,
+	-10,  0,  5,  0,  0,  0,  0,-10,
+	-20,-10,-10, -5, -5,-10,-10,-20
+	};
+
+	const int KingTable[64] = {
+	-30,-40,-40,-50,-50,-40,-40,-30,
+	-30,-40,-40,-50,-50,-40,-40,-30,
+	-30,-40,-40,-50,-50,-40,-40,-30,
+	-30,-40,-40,-50,-50,-40,-40,-30,
+	-20,-30,-30,-40,-40,-30,-30,-20,
+	-10,-20,-20,-20,-20,-20,-20,-10,
+	20, 20,  0,  0,  0,  0, 20, 20,
+	20, 30, 10,  0,  0, 10, 30, 20
+	};
+
+	const int Inverse[64] = {
+	56	,	57	,	58	,	59	,	60	,	61	,	62	,	63	,
+	48	,	49	,	50	,	51	,	52	,	53	,	54	,	55	,
+	40	,	41	,	42	,	43	,	44	,	45	,	46	,	47	,
+	32	,	33	,	34	,	35	,	36	,	37	,	38	,	39	,
+	24	,	25	,	26	,	27	,	28	,	29	,	30	,	31	,
+	16	,	17	,	18	,	19	,	20	,	21	,	22	,	23	,
+	8	,	9	,	10	,	11	,	12	,	13	,	14	,	15	,
+	0	,	1	,	2	,	3	,	4	,	5	,	6	,	7
+	};
+
+	#define INVERSE(s) (Inverse[(s)])
+
+	int i, j, Scr1, Scr2 = 0;
+	int pionB = 0, pionN = 0, cfB = 0, ccB = 0, ccN = 0, cfN = 0, tB = 0, tN = 0, nB = 0, nN = 0;
+	int nbrPiece = 0;
+	int score = 0;
+	
+	// parties : nombre de pièces 
+	for (i=0; i<8; i++)
+	   for (j=0; j<8; j++) {
+		switch (conf->mat[i][j]) {
+		   case 'p' : pionB++; nbrPiece++;  break;
+		   case 'c' : ccB++; nbrPiece++; break;
+		   case 'f' : cfB++; nbrPiece++;  break;
+		   case 't' : tB++; nbrPiece++; break;
+		   case 'n' : nB++; nbrPiece++;  break;
+
+		   case -'p' : pionN++;  break;
+		   case -'c' : ccN++; break;
+		   case -'f' : cfN++;  break;
+		   case -'t' : tN++; break;
+		   case -'n' : nN++;  break;
+		}
+	   }
+
+	// Somme pondérée de pièces de chaque joueur. 
+	// Les poids sont fixés comme suit: pion:2  cavalier/fou:6  tour:8  et  reine:20
+	// Le facteur 100/76 pour ne pas sortir de l'intervalle ]-100 , +100[
+	Scr1 = ( (pionB*2 + cfB*6 + ccB*6 + tB*8 + nB*20) - (pionN*2 + cfN*6 + ccN*6 + tN*8 + nN*20) );
+
+
+	for (i=0; i<8; i++)
+	for (j=0; j<8; j++) {
+		switch (conf->mat[i][j]) {
+		case 'p' :	
+			Scr2 += PawnTable[i*8+j];
+			break;
+		case 'c' : 
+			Scr2 += KnightTable[i*8+j];
+			break;
+		case 'f' : 
+			Scr2 += BishopTable[i*8+j]; 
+			break;
+		case 't' : 
+			Scr2 += RookTable[i*8+j];
+			break;
+		case 'n' :  
+			Scr2 += QueenTable[i*8+j];
+			break;
+		case 'r' :
+			Scr2 += KingTable[i*8+j];
+			break;
+		case -'p' : 
+			Scr2 -= PawnTable[INVERSE(i*8+j)];
+			break;
+		case -'c' :
+			Scr2 -= KnightTable[INVERSE(i*8+j)];
+			break;
+		case -'f' : 
+			Scr2 -= BishopTable[INVERSE(i*8+j)]; 
+			break;
+		case -'t' : 
+			Scr2 -= RookTable[INVERSE(i*8+j)];
+			break;
+		case -'n' : 
+			Scr2 -= QueenTable[INVERSE(i*8+j)];
+			break;
+		case -'r':
+			Scr2 -= KingTable[INVERSE(i*8+j)];
+			break;
+		}
+	}
+	score = (20*Scr1 + Scr2)*100.0/(1520+630);
+
+	if (score > 98 ) score = 98;
+    if (score < -98 ) score = -98;
+
+	return score;	
+
+} // fin de estim8
 /***********************************************************************************/
 
 
@@ -1329,16 +1541,19 @@ int AucunCoupPossible(struct config* conf)
 
 /***********************************************************************************/
 
-int iterative_deepening(struct config* conf, int max_depth,int largeur) {
-    int best_score = -INFINI;
+int iterative_deepening(struct config* conf,int largeur,int mode,int estMin) {
+    int best_score = mode==MAX? -INFINI:INFINI;
     int best_move;
     int depth = 1;
     clock_t start_time = clock();
 
-    while ((clock() - start_time) < TIME_LIMIT && depth <= max_depth) {
-        int score = minmax_ab(conf, MAX, depth, -INFINI, INFINI, largeur, 0, npieces(conf));
-        if (score > best_score) {
+    while ((clock() - start_time) < TIME_LIMIT && depth <= MAX_DEPTH_FOR_IDS) {
+        int score = minmax_ab(conf, mode, depth, -INFINI, INFINI, largeur, estMin, npieces(conf));
+        if (mode==MAX && score > best_score) { // MODE MAX
             best_score = score;
+        }
+        if(mode==MIN && score<best_score){  //MODE MIN
+            best_score=score;
         }
         depth++;
     }

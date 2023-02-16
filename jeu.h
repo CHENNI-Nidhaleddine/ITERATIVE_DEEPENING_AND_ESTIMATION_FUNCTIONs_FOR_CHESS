@@ -10,10 +10,13 @@ Header du module : jeu.h
 *********************************************************************************/
 #include <stdlib.h>
 #include <math.h>
+#include "libs/fann.h"
+#include "libs/genann.h"
 
 #ifndef JEU_H
 #define JEU_H
 #define TIME_LIMIT 5000  // Time limit in milliseconds
+#define MAX_DEPTH_FOR_IDS 10
 #define MAX +1          // Joueur Maximisant
 #define MIN -1          // Joueur Minimisant
 
@@ -23,7 +26,7 @@ Header du module : jeu.h
 // pour ne pas le re-considérer une 2e fois.
 // On se limitera donc aux MAXPARTIE derniers coups
 
-
+ struct fann *ANN;
 // Le type d'une configuration
 struct config {
     char mat[8][8];            // Echiquier
@@ -76,7 +79,7 @@ int estim6(struct config* conf);
    et utilisez la pour un des 2 joueurs N ou B (voir la fonction main)
 */
 int estim7(struct config* conf);
-
+int estim8(struct config* conf);
 
 /* ----------------------------------
    Génère, pour le joueur 'mode', les successeurs de la configuration 'conf' dans le tableau 'T',
@@ -176,7 +179,7 @@ int confcmp321(const void* a, const void* b);
 */
 void formuler_coup(struct config* oldconf, struct config* newconf, char* coup);
 
-int iterative_deepening(struct config *conf, int max_depth,int largeur);
+int iterative_deepening(struct config *conf,int largeur,int mode,int estMin);
 
 #endif
 #pragma once

@@ -16,7 +16,7 @@ Header du module : jeu.h
 #ifndef JEU_H
 #define JEU_H
 #define TIME_LIMIT 5000  // Time limit in milliseconds
-#define MAX_DEPTH_FOR_IDS 10
+#define MAX_DEPTH_FOR_IDS 30
 #define MAX +1          // Joueur Maximisant
 #define MIN -1          // Joueur Minimisant
 
@@ -80,7 +80,7 @@ int estim6(struct config* conf);
 */
 int estim7(struct config* conf);
 int estim8(struct config* conf);
-
+int estim9(struct config* conf);
 /* ----------------------------------
    Génère, pour le joueur 'mode', les successeurs de la configuration 'conf' dans le tableau 'T',
    retourne aussi dans 'n' le nombre de configurations filles générées

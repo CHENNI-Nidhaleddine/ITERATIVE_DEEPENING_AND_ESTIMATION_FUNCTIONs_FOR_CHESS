@@ -560,27 +560,6 @@ int estim7( struct config *conf )
 
 int estim8( struct config *conf )
 {
-	const int PawnTable[64] = {
-	0,  0,  0,  0,  0,  0,  0,  0,
-	50, 50, 50, 50, 50, 50, 50, 50,
-	10, 10, 20, 30, 30, 20, 10, 10,
-	5,  5, 10, 25, 25, 10,  5,  5,
-	0,  0,  0, 20, 20,  0,  0,  0,
-	5, -5,-10,  0,  0,-10, -5,  5,
-	5, 10, 10,-20,-20, 10, 10,  5,
-	0,  0,  0,  0,  0,  0,  0,  0
-	};
-
-	const int KnightTable[64] = {
-	-50,-40,-30,-30,-30,-30,-40,-50,
-	-40,-20,  0,  0,  0,  0,-20,-40,
-	-30,  0, 10, 15, 15, 10,  0,-30,
-	-30,  5, 15, 20, 20, 15,  5,-30,
-	-30,  0, 15, 20, 20, 15,  0,-30,
-	-30,  5, 10, 15, 15, 10,  5,-30,
-	-40,-20,  0,  5,  5,  0,-20,-40,
-	-50,-40,-30,-30,-30,-30,-40,-50		
-	};
 
 	const int BishopTable[64] = {
 	-20,-10,-10,-10,-10,-10,-10,-20,
@@ -593,6 +572,17 @@ int estim8( struct config *conf )
 	-20,-10,-10,-10,-10,-10,-10,-20
 	};
 
+    	const int KnightTable[64] = {
+	-50,-40,-30,-30,-30,-30,-40,-50,
+	-40,-20,  0,  0,  0,  0,-20,-40,
+	-30,  0, 10, 15, 15, 10,  0,-30,
+	-30,  5, 15, 20, 20, 15,  5,-30,
+	-30,  0, 15, 20, 20, 15,  0,-30,
+	-30,  5, 10, 15, 15, 10,  5,-30,
+	-40,-20,  0,  5,  5,  0,-20,-40,
+	-50,-40,-30,-30,-30,-30,-40,-50		
+	};
+
 	const int RookTable[64] = {
 	0,  0,  0,  0,  0,  0,  0,  0,
 	5, 10, 10, 10, 10, 10, 10,  5,
@@ -603,6 +593,17 @@ int estim8( struct config *conf )
 	-5,  0,  0,  0,  0,  0,  0, -5,
 	0,  0,  0,  5,  5,  0,  0,  0	
 	};
+    	const int PawnTable[64] = {
+	0,  0,  0,  0,  0,  0,  0,  0,
+	50, 50, 50, 50, 50, 50, 50, 50,
+	10, 10, 20, 30, 30, 20, 10, 10,
+	5,  5, 10, 25, 25, 10,  5,  5,
+	0,  0,  0, 20, 20,  0,  0,  0,
+	5, -5,-10,  0,  0,-10, -5,  5,
+	5, 10, 10,-20,-20, 10, 10,  5,
+	0,  0,  0,  0,  0,  0,  0,  0
+	};
+
 
 	const int QueenTable[64] = {
 	-20,-10,-10, -5, -5,-10,-10,-20,
@@ -643,8 +644,8 @@ int estim8( struct config *conf )
 	int pionB = 0, pionN = 0, cfB = 0, ccB = 0, ccN = 0, cfN = 0, tB = 0, tN = 0, nB = 0, nN = 0;
 	int nbrPiece = 0;
 	int score = 0;
-	
-	// parties : nombre de pièces 
+    int tmpScore=0;
+
 	for (i=0; i<8; i++)
 	   for (j=0; j<8; j++) {
 		switch (conf->mat[i][j]) {
@@ -717,6 +718,190 @@ int estim8( struct config *conf )
 	return score;	
 
 } // fin de estim8
+/* combination btween 8 and 4 */
+int estim9( struct config *conf )
+{
+		
+	const int BishopTable[64] = {
+	-20,-10,-10,-10,-10,-10,-10,-20,
+	-10,  0,  0,  0,  0,  0,  0,-10,
+	-10,  0,  5, 10, 10,  5,  0,-10,
+	-10,  5,  5, 10, 10,  5,  5,-10,
+	-10,  0, 10, 10, 10, 10,  0,-10,
+	-10, 10, 10, 10, 10, 10, 10,-10,
+	-10,  5,  0,  0,  0,  0,  5,-10,
+	-20,-10,-10,-10,-10,-10,-10,-20
+	};
+
+    	const int KnightTable[64] = {
+	-50,-40,-30,-30,-30,-30,-40,-50,
+	-40,-20,  0,  0,  0,  0,-20,-40,
+	-30,  0, 10, 15, 15, 10,  0,-30,
+	-30,  5, 15, 20, 20, 15,  5,-30,
+	-30,  0, 15, 20, 20, 15,  0,-30,
+	-30,  5, 10, 15, 15, 10,  5,-30,
+	-40,-20,  0,  5,  5,  0,-20,-40,
+	-50,-40,-30,-30,-30,-30,-40,-50		
+	};
+
+	const int RookTable[64] = {
+	0,  0,  0,  0,  0,  0,  0,  0,
+	5, 10, 10, 10, 10, 10, 10,  5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	-5,  0,  0,  0,  0,  0,  0, -5,
+	0,  0,  0,  5,  5,  0,  0,  0	
+	};
+    	const int PawnTable[64] = {
+	0,  0,  0,  0,  0,  0,  0,  0,
+	50, 50, 50, 50, 50, 50, 50, 50,
+	10, 10, 20, 30, 30, 20, 10, 10,
+	5,  5, 10, 25, 25, 10,  5,  5,
+	0,  0,  0, 20, 20,  0,  0,  0,
+	5, -5,-10,  0,  0,-10, -5,  5,
+	5, 10, 10,-20,-20, 10, 10,  5,
+	0,  0,  0,  0,  0,  0,  0,  0
+	};
+
+
+	const int QueenTable[64] = {
+	-20,-10,-10, -5, -5,-10,-10,-20,
+	-10,  0,  0,  0,  0,  0,  0,-10,
+	-10,  0,  5,  5,  5,  5,  0,-10,
+	-5,  0,  5,  5,  5,  5,  0, -5,
+	0,  0,  5,  5,  5,  5,  0, -5,
+	-10,  5,  5,  5,  5,  5,  0,-10,
+	-10,  0,  5,  0,  0,  0,  0,-10,
+	-20,-10,-10, -5, -5,-10,-10,-20
+	};
+
+	const int KingTable[64] = {
+	-30,-40,-40,-50,-50,-40,-40,-30,
+	-30,-40,-40,-50,-50,-40,-40,-30,
+	-30,-40,-40,-50,-50,-40,-40,-30,
+	-30,-40,-40,-50,-50,-40,-40,-30,
+	-20,-30,-30,-40,-40,-30,-30,-20,
+	-10,-20,-20,-20,-20,-20,-20,-10,
+	20, 20,  0,  0,  0,  0, 20, 20,
+	20, 30, 10,  0,  0, 10, 30, 20
+	};
+
+	const int Inverse[64] = {
+	56	,	57	,	58	,	59	,	60	,	61	,	62	,	63	,
+	48	,	49	,	50	,	51	,	52	,	53	,	54	,	55	,
+	40	,	41	,	42	,	43	,	44	,	45	,	46	,	47	,
+	32	,	33	,	34	,	35	,	36	,	37	,	38	,	39	,
+	24	,	25	,	26	,	27	,	28	,	29	,	30	,	31	,
+	16	,	17	,	18	,	19	,	20	,	21	,	22	,	23	,
+	8	,	9	,	10	,	11	,	12	,	13	,	14	,	15	,
+	0	,	1	,	2	,	3	,	4	,	5	,	6	,	7
+	};
+
+	#define INVERSE(s) (Inverse[(s)])
+
+	int i, j, Scr1, Scr2 = 0, Scr3 = 0;
+	int pionB = 0, pionN = 0, cfB = 0, ccB = 0, ccN = 0, cfN = 0, tB = 0, tN = 0, nB = 0, nN = 0;
+	int nbrPiece = 0;
+	int score = 0;
+
+	for (i=0; i<8; i++)
+	   for (j=0; j<8; j++) {
+		switch (conf->mat[i][j]) {
+		   case 'p' : pionB++; nbrPiece++;  break;
+		   case 'c' : ccB++; nbrPiece++; break;
+		   case 'f' : cfB++; nbrPiece++;  break;
+		   case 't' : tB++; nbrPiece++; break;
+		   case 'n' : nB++; nbrPiece++;  break;
+
+		   case -'p' : pionN++;  break;
+		   case -'c' : ccN++; break;
+		   case -'f' : cfN++;  break;
+		   case -'t' : tN++; break;
+		   case -'n' : nN++;  break;
+		}
+	   }
+
+	Scr1 = ( (pionB*2 + cfB*6 + ccB*6 + tB*8 + nB*20) - (pionN*2 + cfN*6 + ccN*6 + tN*8 + nN*20) );
+
+	if ( nbrPiece > 10){
+		for (i=0; i<8; i++)
+		for (j=0; j<8; j++) {
+			switch (conf->mat[i][j]) {
+			case 'p' :	
+				Scr2 += PawnTable[i*8+j];
+				break;
+			case 'c' : 
+				Scr2 += KnightTable[i*8+j];
+				break;
+			case 'f' : 
+				Scr2 += BishopTable[i*8+j]; 
+				break;
+			case 't' : 
+				Scr2 += RookTable[i*8+j];
+				break;
+			case 'n' :  
+				Scr2 += QueenTable[i*8+j];
+				break;
+			case 'r' :
+				Scr2 += KingTable[i*8+j];
+				break;
+			case -'p' : 
+				Scr2 -= PawnTable[INVERSE(i*8+j)];
+				break;
+			case -'c' :
+				Scr2 -= KnightTable[INVERSE(i*8+j)];
+				break;
+			case -'f' : 
+				Scr2 -= BishopTable[INVERSE(i*8+j)]; 
+				break;
+			case -'t' : 
+				Scr2 -= RookTable[INVERSE(i*8+j)];
+				break;
+			case -'n' : 
+				Scr2 -= QueenTable[INVERSE(i*8+j)];
+				break;
+			case -'r':
+				Scr2 -= KingTable[INVERSE(i*8+j)];
+				break;
+			}
+		}
+		score = (20*Scr1 + Scr2)*100.0/(1520+630);
+	}else {
+        //estim4 less than 10piecs
+		for (i=0; i<8; i++)
+			for (j=0; j<8; j++) {
+				if ( conf->mat[i][j] < 0 && caseMenaceePar(MAX, i, j, conf) ) {
+				Scr3++;
+				if ( conf->mat[i][j] == -'c' || conf->mat[i][j] == -'f' )
+					Scr3++;
+				if ( conf->mat[i][j] == -'t' || conf->mat[i][j] == -'n' )
+					Scr3 += 2;
+				if ( conf->mat[i][j] == -'r' )
+					Scr3 += 5;
+				}
+				if ( conf->mat[i][j] > 0 && caseMenaceePar(MIN, i, j, conf) ) {
+				Scr3--;
+				if ( conf->mat[i][j] == 'c' || conf->mat[i][j] == 'f' )
+					Scr3--;
+				if ( conf->mat[i][j] == 't' || conf->mat[i][j] == 'n' )
+					Scr3 -= 2;
+				if ( conf->mat[i][j] == 'r' )
+					Scr3 -= 5;
+				}
+			}
+		
+		score = (2*Scr1 + Scr3)*100.0/(152+31);
+	}
+
+
+	if (score > 98 ) score = 98;
+    if (score < -98 ) score = -98;
+
+	return score;
+
+} // fin de estim9
 /***********************************************************************************/
 
 

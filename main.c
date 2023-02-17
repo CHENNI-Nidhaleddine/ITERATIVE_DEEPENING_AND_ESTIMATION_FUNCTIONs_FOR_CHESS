@@ -88,8 +88,9 @@ int main( int argc, char *argv[] )
    Est[5] = estim6;
    Est[6] = estim7;
    Est[7] = estim8;
+   Est[8] = estim9;
    // Nombre de fonctions d'estimation disponibles
-   nbEst = 8;        
+   nbEst = 9;        
 
    // Choix du type d'exécution (pc-contre-pc ou user-contre-pc) ...
    printf("Type de parties (B:Blancs  N:Noirs) :\n");
@@ -109,20 +110,21 @@ int main( int argc, char *argv[] )
       printf("4- basée sur le nb de pieces et les menaces\n");
       printf("5- basée sur le nb de pieces et l'occupation\n");
       printf("6- basée sur une combinaisant de 3 estimations: (2 -> 5 -> 4)\n");
-      printf("7- une fonction d'estimation par regression) \n");
-      printf("8- une fonction d'estimation par piece-square tables \n\n");
+      printf("7- une fonction d'estimation par regression (basee sur 3.5millions match de chess) \n");
+      printf("8- une fonction d'estimation par piece-square tables \n");
+      printf("9- une fonction d'estimation combination(8 et 4)\n\n");
       if (typeExec != 3) {
          printf("Donnez la fonction d'estimation utilisée par le PC pour le joueur B : ");
          scanf(" %d", &estMax);
       }
       else
-         estMax = 8;
+         estMax = 9;
       if (typeExec != 2) {
          printf("Donnez la fonction d'estimation utilisée par le PC pour le joueur N : ");
          scanf(" %d", &estMin);
       }
       else
-         estMin = 8;
+         estMin = 9;
    }
    while ( estMax < 1 || estMax > nbEst || estMin < 1 || estMin > nbEst );
 
@@ -291,8 +293,8 @@ int main( int argc, char *argv[] )
             j = -1;
 
             for (i=0; i<n; i++) {
-                cout=iterative_deepening(&T[i],largeur,MIN,estMax);
-                //cout = minmax_ab( &T[i], MIN, hauteur, score, +INFINI, largeur, estMax, nbp );
+               cout=iterative_deepening(&T[i],largeur,MIN,estMax);
+              // cout = minmax_ab( &T[i], MIN, hauteur, score, +INFINI, largeur, estMax, nbp );
                 printf("."); fflush(stdout);
                 
                 if ( cout > score ) {  // Choisir le meilleur coup (c-a-d le plus grand score)
@@ -429,8 +431,8 @@ int main( int argc, char *argv[] )
             score = +INFINI;
             j = -1;                
             for (i=0; i<n; i++) {
-                cout=iterative_deepening(&T[i],largeur,MAX,estMin);
-               // cout = minmax_ab( , MAX, hauteur, -INFINI, score, largeur, estMin, nbp );
+                 cout=iterative_deepening(&T[i],largeur,MAX,estMin);
+                 //cout = minmax_ab( &T[i], MAX, hauteur, -INFINI, score, largeur, estMin, nbp );
                 //cout = minmax_ab( &T[i], MAX, hauteur, -INFINI, +INFINI, largeur, estMin );
                 printf("."); fflush(stdout);
                 if ( cout < score ) {  // Choisir le meilleur coup (c-a-d le plus petit score)

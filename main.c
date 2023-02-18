@@ -65,7 +65,7 @@ int nbBeta = 0;
 
 int main( int argc, char *argv[] )
 {
-   ANN = fann_create_from_file("dataset/data.net");
+   ANN = fann_create_from_file("model/model.net");
    int n, i, j, score, stop, cout, hauteur, largeur, tour, estMin, estMax, nbp;
 
    int sx, dx, cout2, legal;
@@ -281,26 +281,26 @@ int main( int argc, char *argv[] )
 
             // 1- on commence donc par une petite exploration de profondeur h0 
             //    pour récupérer des estimations plus précises sur chaque coups:
-            // for (i=0; i<n; i++) 
-            //     T[i].val = minmax_ab( &T[i], MIN, h0, -INFINI, +INFINI, largeur, estMax, nbp );
+            for (i=0; i<n; i++) 
+                T[i].val = minmax_ab( &T[i], MIN, h0, -INFINI, +INFINI, largeur, estMax, nbp );
 
             // 2- on réalise le tri des alternatives T suivant les estimations récupérées:                
-            // qsort(T, n, sizeof(struct config), confcmp321);   // en ordre décroissant des évaluations
+            qsort(T, n, sizeof(struct config), confcmp321);   // en ordre décroissant des évaluations
             if ( largeur < n ) n = largeur;
                
             // 3- on lance l'exploration des alternatives triées avec la profondeur voulue:
             score = -INFINI;
             j = -1;
+
             for (i=0; i<n; i++) {
-              //minmax ne change pas le contenu de T[i] donc on ne traite pas le cas de T[i] change.
                cout=iterative_deepening(&T[i],largeur,MIN,estMax);
-           //    cout = minmax_ab( &T[i], MIN, hauteur, score, +INFINI, largeur, estMax, nbp );
+              // cout = minmax_ab( &T[i], MIN, hauteur, score, +INFINI, largeur, estMax, nbp );
                 printf("."); fflush(stdout);
+                
                 if ( cout > score ) {  // Choisir le meilleur coup (c-a-d le plus grand score)
                    score = cout;
                    j = i;
                 }
-           
                 if ( cout == 100 ) {
                    printf("v"); fflush(stdout);
                    break;
@@ -420,11 +420,11 @@ int main( int argc, char *argv[] )
 
             // 1- on commence donc par une petite exploration de profondeur h0 
             //    pour récupérer des estimations plus précises sur chaque coups:
-            // for (i=0; i<n; i++) 
-            //     T[i].val = minmax_ab( &T[i], MAX, h0, -INFINI, +INFINI, largeur, estMin, nbp );
+            for (i=0; i<n; i++) 
+                T[i].val = minmax_ab( &T[i], MAX, h0, -INFINI, +INFINI, largeur, estMin, nbp );
 
             // 2- on réalise le tri des alternatives T suivant les estimations récupérées:
-            // qsort(T, n, sizeof(struct config), confcmp123);   // en ordre croissant des évaluations
+            qsort(T, n, sizeof(struct config), confcmp123);   // en ordre croissant des évaluations
             if ( largeur < n ) n = largeur;
 
             // 3- on lance l'exploration des alternatives triées avec la profondeur voulue:

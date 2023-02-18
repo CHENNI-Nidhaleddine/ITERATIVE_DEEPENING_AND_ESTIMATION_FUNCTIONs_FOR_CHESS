@@ -1,4 +1,4 @@
---- Estimation_pour_Blancs = 9 	 Estimation_pour_Noirs = 1 ---
+--- Estimation_pour_Blancs = 9 	 Estimation_pour_Noirs = 8 ---
 --- coup N° 0 ---
 tcfnrfct
 pppppppp
@@ -15,9 +15,9 @@ pppppppp
         
         
         
-     C  
+C       
 PPPPPPPP
-TCFNRF T
+T FNRFCT
 
 --- coup N° 2 ---
 tcfnrfct
@@ -25,9 +25,9 @@ tcfnrfct
 p       
         
         
-     C  
+C       
 PPPPPPPP
-TCFNRF T
+T FNRFCT
 
 --- coup N° 3 ---
 tcfnrfct
@@ -35,9 +35,9 @@ tcfnrfct
 p       
         
         
-C    C  
+C       
 PPPPPPPP
-T FNRF T
+ TFNRFCT
 
 --- coup N° 4 ---
 tcfnrfct
@@ -45,737 +45,907 @@ tcfnrfct
         
 p       
         
-C    C  
+C       
 PPPPPPPP
-T FNRF T
+ TFNRFCT
 
 --- coup N° 5 ---
 tcfnrfct
  ppppppp
         
-pC      
+p       
         
-     C  
+C       
 PPPPPPPP
-T FNRF T
+T FNRFCT
 
 --- coup N° 6 ---
 tcfnrfct
  ppppppp
         
- C      
+        
 p       
-     C  
+C       
 PPPPPPPP
-T FNRF T
+T FNRFCT
 
 --- coup N° 7 ---
 tcfnrfct
  ppppppp
         
         
-p  C    
-     C  
+p       
+C       
 PPPPPPPP
-T FNRF T
+ TFNRFCT
 
 --- coup N° 8 ---
 tcfnrfct
   pppppp
  p      
         
-p  C    
-     C  
+p       
+C       
 PPPPPPPP
-T FNRF T
+ TFNRFCT
 
 --- coup N° 9 ---
 tcfnrfct
   pppppp
  p      
-    C   
-p  C    
         
+p       
+C      C
 PPPPPPPP
-T FNRF T
+ TFNRF T
 
 --- coup N° 10 ---
 tcfnrfct
-  pppppp
- p      
-    C   
-   C    
+   ppppp
+ pp     
+        
 p       
+C      C
 PPPPPPPP
-T FNRF T
+ TFNRF T
 
 --- coup N° 11 ---
 tcfnrfct
-  pppppp
- p      
-    C   
-   C    
+   ppppp
+ pp     
+        
 p       
+C      C
 PPPPPPPP
- TFNRF T
+T FNRF T
 
 --- coup N° 12 ---
 tcfnrfct
-  pppppp
+   ppppp
+  p     
  p      
-    C   
-   C    
-        
-PpPPPPPP
- TFNRF T
+p       
+C      C
+PPPPPPPP
+T FNRF T
 
 --- coup N° 13 ---
 tcfnrfct
-  pppppp
+   ppppp
+  p     
  p      
-    C   
-   C    
-        
-PpPPPPPP
- TFNRFT 
+p       
+C      C
+PPPPPPPP
+ TFNRF T
 
 --- coup N° 14 ---
 tcfnrfct
-  pppppp
- p      
-    C   
-   C    
+   ppppp
+  p     
         
-P PPPPPP
- TnNRFT 
+pp      
+C      C
+PPPPPPPP
+ TFNRF T
 
 --- coup N° 15 ---
 tcfnrfct
-  pppppp
- p      
-    C   
-   C    
+   ppppp
+  p     
         
-P PPPPPP
-  TNRFT 
+pp      
+C      C
+PPPPPPPP
+T FNRF T
 
 --- coup N° 16 ---
 tcfnrfct
    ppppp
- pp     
-    C   
-   C    
+  p     
         
-P PPPPPP
-  TNRFT 
+p       
+p      C
+PPPPPPPP
+T FNRF T
 
 --- coup N° 17 ---
 tcfnrfct
    ppppp
- pp     
-    C   
-   C    
+  p     
         
-P PPPPPP
-T  NRFT 
+p       
+p      C
+PPPPPPPP
+T FNRFT 
 
 --- coup N° 18 ---
 tcfnrfct
    ppppp
- p      
-  p C   
-   C    
+  p     
         
-P PPPPPP
-T  NRFT 
+p       
+       C
+PpPPPPPP
+T FNRFT 
 
 --- coup N° 19 ---
 tcfnrfct
    ppppp
- p      
-  p C   
-   C    
+  p     
         
-P PPPPPP
-T  NRF T
+p       
+       C
+PpPPPPPP
+ TFNRFT 
 
 --- coup N° 20 ---
 tcfnrfct
    ppppp
- p      
-    C   
-   p    
+  p     
         
+p       
+       C
 P PPPPPP
-T  NRF T
+ TpNRFT 
 
 --- coup N° 21 ---
 tcfnrfct
    ppppp
- p      
-    C   
-   p    
+  p     
         
-P PPPPPP
-T  NRFT 
+p       
+       C
+PTPPPPPP
+  pNRFT 
 
 --- coup N° 22 ---
 tcfnrfct
    ppppp
+  p     
         
- p  C   
-   p    
         
-P PPPPPP
-T  NRFT 
+p      C
+PTPPPPPP
+  pNRFT 
 
 --- coup N° 23 ---
 tcfnrfct
    ppppp
+  p     
         
- p  C   
-   p    
         
-P PPPPPP
- T NRFT 
+p      C
+PTPPPPPP
+  N RFT 
 
 --- coup N° 24 ---
 tcfnrfct
    ppppp
+  p     
         
-    C   
- p p    
         
-P PPPPPP
- T NRFT 
+       C
+PpPPPPPP
+  N RFT 
 
 --- coup N° 25 ---
 tcfnrfct
    ppppp
+  p     
         
-    C   
- p p    
         
-PTPPPPPP
-   NRFT 
+       C
+PpPPPPPP
+ N  RFT 
 
 --- coup N° 26 ---
 tcfnrfct
    ppppp
         
-    C   
-   p    
- p      
-PTPPPPPP
-   NRFT 
+  p     
+        
+       C
+PpPPPPPP
+ N  RFT 
 
 --- coup N° 27 ---
 tcfnrfct
    ppppp
         
-    C   
-   p    
- p      
-PTPPPPPP
-  N RFT 
+  p     
+        
+       C
+PNPPPPPP
+    RFT 
 
 --- coup N° 28 ---
- cfnrfct
+tcfnrfct
    ppppp
-t       
-    C   
-   p    
- p      
-PTPPPPPP
-  N RFT 
+        
+        
+  p     
+       C
+PNPPPPPP
+    RFT 
 
 --- coup N° 29 ---
- cfnrfct
+tcfnrfct
    ppppp
-t       
-    C   
-   p    
- p      
-PTPPPPPP
-   NRFT 
+        
+        
+  p     
+       C
+PNPPPPPP
+   R FT 
 
 --- coup N° 30 ---
- cfnrf t
-   ppppp
-t      c
-    C   
+tcfnrfct
+    pppp
    p    
- p      
-PTPPPPPP
-   NRFT 
+        
+  p     
+       C
+PNPPPPPP
+   R FT 
 
 --- coup N° 31 ---
- cfnrf t
-   ppppp
-t      c
-    C   
+tcfnrfct
+    pppp
    p    
- p      
-PTPPPPPP
-N   RFT 
+        
+  p     
+       C
+PNPPPPPP
+  R  FT 
 
 --- coup N° 32 ---
- cfnrfct
-   ppppp
-t       
-    C   
-   p    
- p      
-PTPPPPPP
-N   RFT 
-
---- coup N° 33 ---
- cfnrfct
-   ppppp
-t       
+tcfnrfct
+    pppp
         
    p    
- p C    
-PTPPPPPP
-N   RFT 
+  p     
+       C
+PNPPPPPP
+  R  FT 
+
+--- coup N° 33 ---
+tcfnrfct
+    pppp
+        
+   p    
+  p     
+       C
+PNPPPPPP
+ R   FT 
 
 --- coup N° 34 ---
- cfnrfct
+tcfnrfct
     pppp
-t       
-   p    
-   p    
- p C    
-PTPPPPPP
-N   RFT 
+        
+        
+  pp    
+       C
+PNPPPPPP
+ R   FT 
 
 --- coup N° 35 ---
- cfnrfct
+tcfnrfct
     pppp
-t       
-   p    
-   p    
- p C    
-PTPPPPPP
-   NRFT 
+        
+        
+  pp    
+       C
+PNPPPPPP
+R    FT 
 
 --- coup N° 36 ---
- cfnrfct
-    pp p
-t     p 
-   p    
-   p    
- p C    
-PTPPPPPP
-   NRFT 
+tcfnrfct
+    pppp
+        
+        
+  p     
+   p   C
+PNPPPPPP
+R    FT 
 
 --- coup N° 37 ---
- cfnrfct
-    pp p
-t     p 
-   p    
-   p    
- p C    
-PTPPPPPP
-  N RFT 
+tcfnrfct
+    pppp
+        
+        
+  p     
+   p   C
+PNPPPPPP
+R    F T
 
 --- coup N° 38 ---
- cfnrf t
-    pp p
-t     pc
-   p    
-   p    
- p C    
-PTPPPPPP
-  N RFT 
+tcfnrfct
+    pppp
+        
+        
+  p     
+       C
+PNpPPPPP
+R    F T
 
 --- coup N° 39 ---
- cfnrf t
-    pp p
-t     pc
-   p    
-   p    
- p C    
-PTPPPPPP
-   NRFT 
+tcfnrfct
+    pppp
+        
+        
+  p     
+        
+PNpPPPPP
+R    FCT
 
 --- coup N° 40 ---
- cfnrf t
-     p p
-t     pc
-   pp   
-   p    
- p C    
-PTPPPPPP
-   NRFT 
+tcfnrfct
+    pppp
+        
+        
+  p     
+        
+PN PPPPP
+R p  FCT
 
 --- coup N° 41 ---
- cfnrf t
-     p p
-t     pc
-   pp   
-   p    
- p C    
-PTPPPPPP
-   NRF T
+tcfnrfct
+    pppp
+        
+        
+  p     
+        
+PN PPPPP
+ Rp  FCT
 
 --- coup N° 42 ---
- c nrf t
-     p p
-t   f pc
-   pp   
-   p    
- p C    
-PTPPPPPP
-   NRF T
+tcfnrfct
+    pppp
+        
+        
+        
+  p     
+PN PPPPP
+ Rp  FCT
 
 --- coup N° 43 ---
- c nrf t
-     p p
-t   f pc
-  Cpp   
-   p    
- p      
-PTPPPPPP
-   NRF T
+tcfnrfct
+    pppp
+        
+        
+        
+  p     
+PN PPPPP
+  R  FCT
 
 --- coup N° 44 ---
- c nr  t
-     p p
-t   f pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-   NRF T
+tcfnrfct
+    pppp
+        
+        
+        
+        
+Pp PPPPP
+  R  FCT
 
 --- coup N° 45 ---
- c nr  t
-     p p
-t   f pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-   NRFT 
+tcfnrfct
+    pppp
+        
+        
+        
+        
+PpRPPPPP
+     FCT
 
 --- coup N° 46 ---
- c nr t 
-     p p
-t   f pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-   NRFT 
+tcfnrfct
+    pppp
+        
+        
+        
+        
+P RPPPPP
+ n   FCT
 
 --- coup N° 47 ---
- c nr t 
-     p p
-t   f pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-   NRF T
+tcfnrfct
+    pppp
+        
+        
+        
+        
+P  PPPPP
+ R   FCT
 
 --- coup N° 48 ---
- c nrt  
-     p p
-t   f pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-   NRF T
+tcfnrfct
+     ppp
+    p   
+        
+        
+        
+P  PPPPP
+ R   FCT
 
 --- coup N° 49 ---
- c nrt  
-     p p
-t   f pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-   NRFT 
+tcfnrfct
+     ppp
+    p   
+        
+        
+        
+P RPPPPP
+     FCT
 
 --- coup N° 50 ---
- c nrt  
-   f p p
-t     pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-   NRFT 
+tcfnrfct
+     ppp
+        
+    p   
+        
+        
+P RPPPPP
+     FCT
 
 --- coup N° 51 ---
- c nrt  
-   f p p
-t     pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-  N RFT 
+tcfnrfct
+     ppp
+        
+    p   
+        
+     C  
+P RPPPPP
+     F T
 
 --- coup N° 52 ---
- c nr t 
-   f p p
-t     pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-  N RFT 
+tcfnrfct
+     ppp
+        
+        
+    p   
+     C  
+P RPPPPP
+     F T
 
 --- coup N° 53 ---
- c nr t 
-   f p p
-t     pc
-  fpp   
-   p    
- p      
-PTPPPPPP
-  N RF T
+tcfnrfct
+     ppp
+        
+        
+    p   
+P    C  
+  RPPPPP
+     F T
 
 --- coup N° 54 ---
- c nr t 
-   f p p
-t     p 
-  fpp   
-   p  c 
- p      
-PTPPPPPP
-  N RF T
+tcfnrfct
+     ppp
+        
+        
+        
+P    p  
+  RPPPPP
+     F T
 
 --- coup N° 55 ---
- c nr t 
-   f p p
-t     p 
-  fpp   
-   p  c 
- p      
-PTPPPPPP
-  N RFT 
+tcfnrfct
+     ppp
+        
+        
+        
+P    p  
+  RPPPPP
+     FT 
 
 --- coup N° 56 ---
- c nr t 
-   f p p
-      p 
-  fpp   
-   p  c 
-tp      
-PTPPPPPP
-  N RFT 
+tcfnrfct
+     ppp
+        
+        
+        
+P       
+  RPpPPP
+     FT 
 
 --- coup N° 57 ---
- c nr t 
-   f p p
-      p 
-  fpp   
-   p  c 
-tp      
-PTPPPPPP
-  N RF T
+tcfnrfct
+     ppp
+        
+        
+        
+P       
+  RPFPPP
+      T 
 
 --- coup N° 58 ---
- c nr t 
-   f p p
-      p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
-  N RF T
+tcfnrfct
+      pp
+     p  
+        
+        
+P       
+  RPFPPP
+      T 
 
 --- coup N° 59 ---
- c nr t 
-   f p p
-      p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
-  N RFT 
+tcfnrfct
+      pp
+     p  
+        
+        
+P       
+  RPFPPP
+       T
 
 --- coup N° 60 ---
- c n  t 
-   frp p
-      p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
-  N RFT 
+tcfnrfct
+       p
+     pp 
+        
+        
+P       
+  RPFPPP
+       T
 
 --- coup N° 61 ---
- c n  t 
-   frp p
-      p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
-  N RF T
+tcfnrfct
+       p
+     pp 
+        
+        
+P       
+  RPFPPP
+     T  
 
 --- coup N° 62 ---
- c n    
-   frptp
+tcfnrfct
+       p
+     p  
       p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
-  N RF T
+        
+P       
+  RPFPPP
+     T  
 
 --- coup N° 63 ---
- c n    
-   frptp
+tcfnrfct
+       p
+     p  
       p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
-   NRF T
+        
+P       
+  RPFPPP
+       T
 
 --- coup N° 64 ---
- c n    
-    rptp
-    f p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
-   NRF T
+tcfnrfct
+       p
+     p  
+        
+      p 
+P       
+  RPFPPP
+       T
 
 --- coup N° 65 ---
- c n    
-    rptp
-    f p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
- N  RF T
+tcfnrfct
+       p
+     p  
+        
+      p 
+P       
+  RPFPPP
+      T 
 
 --- coup N° 66 ---
- cfn    
-    rptp
-      p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
- N  RF T
+tcfnrfct
+       p
+     p  
+        
+        
+P     p 
+  RPFPPP
+      T 
 
 --- coup N° 67 ---
- cfn    
-    rptp
-      p 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
- N  RFT 
+tcfnrfct
+       p
+     p  
+        
+        
+P     p 
+  RPFPPP
+       T
 
 --- coup N° 68 ---
- cfn    
-     ptp
-     rp 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
- N  RFT 
+tcfnrfct
+       p
+     p  
+        
+        
+P       
+  RPFPPp
+       T
 
 --- coup N° 69 ---
- cfn    
-     ptp
-     rp 
-  fpp   
-t  p  c 
- p      
-PTPPPPPP
-   NRFT 
+tcfnrfct
+       p
+     p  
+        
+        
+P       
+  RPFPPT
+        
 
 --- coup N° 70 ---
- cfn    
-     ptp
-      p 
-  fppr  
-t  p  c 
- p      
-PTPPPPPP
-   NRFT 
+tcfnrfct
+       p
+        
+     p  
+        
+P       
+  RPFPPT
+        
 
 --- coup N° 71 ---
- cfn    
-     ptp
-      p 
-  fppr  
-t  p  c 
- p      
-PTPPPPPP
-  N RFT 
+tcfnrfct
+       p
+        
+     p  
+P       
+        
+  RPFPPT
+        
 
 --- coup N° 72 ---
- cfn    
-     ptp
-      p 
-  fpp   
-t  pr c 
- p      
-PTPPPPPP
-  N RFT 
+tcfnrfct
+        
+       p
+     p  
+P       
+        
+  RPFPPT
+        
 
 --- coup N° 73 ---
- cfn    
-     ptp
-      p 
-  fpp   
-t  pr c 
- p      
-PTPPPPPP
- N  RFT 
+tcfnrfct
+        
+       p
+     p  
+P       
+  R     
+   PFPPT
+        
 
 --- coup N° 74 ---
- cf     
-   n ptp
-      p 
-  fpp   
-t  pr c 
- p      
-PTPPPPPP
- N  RFT 
+tcfnrfct
+        
+        
+     p p
+P       
+  R     
+   PFPPT
+        
 
 --- coup N° 75 ---
- cf     
-   n ptp
-      p 
-  fpp   
-t  pr c 
- p      
-PTPPPPPP
-   NRFT 
+tcfnrfct
+        
+        
+     p p
+P  P    
+  R     
+    FPPT
+        
 
 --- coup N° 76 ---
- cf  f  
-   n ptp
-      p 
-   pp   
-t  pr c 
- p      
-PTPPPPPP
-   NRFT 
+tcfnrfct
+        
+        
+     p  
+P  P   p
+  R     
+    FPPT
+        
 
 --- coup N° 77 ---
- cf  f  
-   n ptp
+tcfnrfct
+        
+        
+     p  
+P  P  Fp
+  R     
+     PPT
+        
+
+--- coup N° 78 ---
+tcfnrfct
+        
+        
+        
+P  P pFp
+  R     
+     PPT
+        
+
+--- coup N° 79 ---
+tcfnrfct
+        
+        
+        
+P  P pFp
+  R  P  
+      PT
+        
+
+--- coup N° 80 ---
+ cfnrfct
+t       
+        
+        
+P  P pFp
+  R  P  
+      PT
+        
+
+--- coup N° 81 ---
+ cfnrfct
+t       
+        
+        
+P  P pFp
+  R  P T
+      P 
+        
+
+--- coup N° 82 ---
+ cfnrfct
+ t      
+        
+        
+P  P pFp
+  R  P T
+      P 
+        
+
+--- coup N° 83 ---
+ cfnrfct
+ t      
+        
+        
+P RP pFp
+     P T
+      P 
+        
+
+--- coup N° 84 ---
+ cfnrfct
+  t     
+        
+        
+P RP pFp
+     P T
+      P 
+        
+
+--- coup N° 85 ---
+ cfnrfct
+  t     
+        
+ R      
+P  P pFp
+     P T
+      P 
+        
+
+--- coup N° 86 ---
+ cfnrfct
+    t   
+        
+ R      
+P  P pFp
+     P T
+      P 
+        
+
+--- coup N° 87 ---
+ cfnrfct
+    t   
+        
+ R      
+P  P pFp
+     PPT
+        
+        
+
+--- coup N° 88 ---
+ cfnrfct
+    t   
+        
+ R      
+P  P  Fp
+     PpT
+        
+        
+
+--- coup N° 89 ---
+ cfnrfct
+    t   
+        
+ R      
+P  P PFp
+      pT
+        
+        
+
+--- coup N° 90 ---
+ cfnrfct
+    t   
+        
+ R      
+P  P PFp
+       T
       p 
-   pp   
-t  pr c 
- p      
-PTPPPPPP
- N  RFT 
+        
+
+--- coup N° 91 ---
+ cfnrfct
+    t   
+        
+ R      
+P  P PFT
+        
+      p 
+        
+
+--- coup N° 92 ---
+ cfnrfct
+    t   
+        
+ R      
+P  P PFT
+        
+        
+      n 
+
+--- coup N° 93 ---
+ cfnrfct
+    t   
+        
+PR      
+   P PFT
+        
+        
+      n 
+
+--- coup N° 94 ---
+ cfnrfct
+    t   
+        
+PR      
+   P PFT
+        
+      n 
+        
 
